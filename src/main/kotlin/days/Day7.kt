@@ -36,7 +36,7 @@ object Day7 {
                 }
             }
         }
-        val s = output.filterKeys { it == "/" }.values.first()
+        val s = output.getValue("/")
         val rs = 30000000 - (70000000 - s)
         val ans = output.values.filter { it >= rs }.minOf { it }
         println(ans)
